@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body tabindex="-1"> 
+<nav id="nav">
+    <div id="innernav">
+        <div onclick="scroll_main()" class="logo"><img src="https://i.ibb.co/34zMdGN/obraz-2023-06-13-193641193-removebg-preview.png" alt="">WebBoost</div>
+        <div class="nav_href navbuttons" onclick="scroll_about()">o nas</div>
+        <div class="nav_href navbuttons" onclick="scroll_oferta()">oferty</div>
+        <div class="nav_href navbuttons" onclick="scroll_contact()">kontakt</div>
+        <div class="hamburger" onclick="openmenu()">
+            <img src="https://i.ibb.co/3krW3qB/hamburger.png" alt="">
+        </div>
+    </div>
+    <div class="contact_nav" onclick="scroll_contact()">
+        <div class="redbutton">darmowa wycena</div>
+    </div>
+    
+</nav>
+<div id="mobilemenu" class="hidemenu">
+    <div id="close" onclick="closemenu()">zamknij</div>
+    <div class="menucontainer">
+        <div onclick="scroll_main();closemenu()">Webboost</div>
+        <div onclick="scroll_about();closemenu()">o nas</div>
+        <div onclick="scroll_oferta();closemenu()">oferty</div>
+        <div onclick="scroll_contact();closemenu()">kontakt</div>
+        <div onclick="scroll_contact();closemenu()" class="redbutton_mobilemenu">darmowa wycena</div>
+        <div class="allrights">@webboost 2023</div>
+    </div>
+</div>
+<script>
+    function closemenu() {
+        let menu = document.getElementById("mobilemenu");
+        let nav = document.getElementById("nav");
+        let one = document.getElementById("container_one");
+        let two = document.getElementById("container_two");
+        let three = document.getElementById("container_three");
+        let four = document.getElementById("container_four");
+        nav.classList.remove("blured");
+        one.classList.remove("blured");
+        two.classList.remove("blured");
+        three.classList.remove("blured");
+        four.classList.remove("blured");
+        menu.classList.add("hidemenu");
+    }
+    function openmenu() {
+        let menu = document.getElementById("mobilemenu");
+        let nav = document.getElementById("nav");
+        let one = document.getElementById("container_one");
+        let two = document.getElementById("container_two");
+        let three = document.getElementById("container_three");
+        let four = document.getElementById("container_four");
+        nav.classList.add("blured");
+        one.classList.add("blured");
+        two.classList.add("blured");
+        three.classList.add("blured");
+        four.classList.add("blured");
+        menu.classList.remove("hidemenu");
+    }
+</script>
+    <div id="container_one">
+        <div id="wallpapercont">
+            <img id="wallpaper" src="https://img.freepik.com/free-photo/professional-programmer-working-late-dark-office_1098-18705.jpg?t=st=1685245306~exp=1685245906~hmac=576a42a4fb3623bf671286a6bc4d335e2221ef5e787b74b3973048e13173bde7" alt="">
+        </div>
+        <div id="textcont">
+            <div class="header">Web Boost <br><span class="test">Your Business</span></div>
+            <div class="sec_header">Profesjonalne strony internetowe <br>tworzone z pasją <br> lorem ipsum bla bla bla</div>
+            <div id="main_button" onclick="scroll_oferta()">Nasze oferty</div>
+        </div>  
+        <div id="wallpapercont_mobile">
+            <div id="wallpaper_mobile"></div>
+        </div>
+    </div>
+    <!-- about -->
+    <div id="container_two">
+        <div id="aboutheader" class="c2header">Wznieś swój biznes na wyższy poziom z WebBoost</div>
+        <!-- <div class="c2subtitle">Nasze projekty</div> -->
+            <div class="onasimg">
+                <img src="https://i.ibb.co/c6wz1YR/obraz-2023-06-17-171549007.png" alt="">
+            </div>
+            <div class="cardcontainer">
+                <div class="card"><span class="span">Profesjonalne strony</span><hr>
+                    Lorem ipsum dolor sit <span class="high">ćpuny do wora</span> amet consectetur adipisicing elit. Deleniti, quae? <span class="high">fajne strony</span> praesentium deleniti, illum <span class="high">sapiente</span> optio hic molestiae dolore quod a ratione, fugiat ab officiis labore deserunt facilis earum eum.
+                </div>
+                <div class="card"><span class="span">SEO & Social Marketing</span> <hr>
+                    <span class="high">Lorem</span> ipsum dolor sit amet consectetur adipisicing elit. <span class="high">Deleniti, quae?</span> Laboriosam praesentium deleniti, illum sapiente optio hic molestiae dolore quod a ratione, fugiat ab officiis <span class="high">labore</span> deserunt facilis earum eum.
+                </div>
+                <div class="card"><span class="span">Indywidualne podejście <span class="hidemobilespan">do klienta</span></span><hr>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quae? <span class="high">Laboriosam praesentium deleniti</span>, illum sapiente optio hic molestiae dolore quod a ratione, fugiat ab officiis labore deserunt facilis earum eum.
+                </div>
+            </div>
+        
+        
+    </div> 
+    <!-- about -->
+    <div id="container_three">
+        
+        <div class="c2header header3">Nasza oferta</div>
+        <div class="subheader3">strony internetowe dopasowane do Twoich potrzeb</div>
+        <div id="offercontainer">
+            <div class="offercard">
+                <!-- <div class="offerimg">
+                    <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div> -->
+                <div class="cardtitle">BASIC</div>
+                <div class="cardprice">już od 699zł</div>
+                <div class="offercard_inside">
+                    <div class="carddescription">
+                        <ul>
+                            <li>do x podstron</li>
+                            <li>wesja mobilna</li>
+                            <li>fajne rzeczy</li>
+                            <li>lorem ipsum</li>
+                        </ul>
+                    </div>
+                    <div class="redbutton_offer">lorem ipsumasd</div>
+                </div>
+            </div>
+            <div class="offercard">
+                <!-- <div class="offerimg">
+                    <img src="https://images.pexels.com/photos/2312369/pexels-photo-2312369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div> -->
+                <div class="cardtitle">PRO</div>
+                <div class="cardprice">już od 1699zł</div>
+                <div class="offercard_inside">
+                    <div class="carddescription">
+                        <ul>
+                            <li>do x podstron</li>
+                            <li>wesja mobilna</li>
+                            <li>fajne rzeczy</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                        </ul>
+                    </div>
+                    <div class="redbutton_offer">lorem ipsumasd</div>
+                </div>
+            </div>
+            <div class="offercard">
+                <!-- <div class="offerimg">
+                    <img src="https://images.pexels.com/photos/534216/pexels-photo-534216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div> -->
+                <div class="cardtitle">ENTERPRISE</div>
+                <div class="cardprice">już od 2699zł</div>
+                <div class="offercard_inside">
+                    <div class="carddescription">
+                        <ul>
+                            <li>do x podstron</li>
+                            <li>wesja mobilna</li>
+                            <li>fajne rzeczy</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                        </ul>
+                    </div>
+                    <div class="redbutton_offer">lorem ipsumasd</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile -->
+        <div id="offercontainer_mobile">
+            <div onclick="goleft()" id="arrow">
+                <div><</div>
+            </div>
+            <div onclick="goright()" id="arrowtwo">
+                <div>></div>
+            </div>
+            <div id="firstcard" class="offercard_mobile secondcard">
+                <!-- <div class="offerimg">
+                    <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div> -->
+                <div class="cardtitle">BASIC</div>
+                <div class="cardprice">już od 699zł</div>
+                <div class="offercard_inside">
+                    <div class="carddescription">
+                        <ul>
+                            <li>do x podstron</li>
+                            <li>wesja mobilna</li>
+                            <li>fajne rzeczy</li>
+                            <li>lorem ipsum</li>
+                        </ul>
+                    </div>
+                    <div class="redbutton_offer">lorem ipsumasd</div>
+                </div>
+            </div>
+            <div id="secondcard" class="offercard_mobile">
+                <!-- <div class="offerimg">
+                    <img src="https://images.pexels.com/photos/2312369/pexels-photo-2312369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div> -->
+                <div class="cardtitle">PRO</div>
+                <div class="cardprice">już od 1699zł</div>
+                <div class="offercard_inside">
+                    <div class="carddescription">
+                        <ul>
+                            <li>do x podstron</li>
+                            <li>wesja mobilna</li>
+                            <li>fajne rzeczy</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                        </ul>
+                    </div>
+                    <div class="redbutton_offer">lorem ipsumasd</div>
+                </div>
+            </div>
+            <div id="thirdcard" class="offercard_mobile secondcard">
+                <!-- <div class="offerimg">
+                    <img src="https://images.pexels.com/photos/534216/pexels-photo-534216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div> -->
+                <div class="cardtitle">ENTERPRISE</div>
+                <div class="cardprice">już od 2699zł</div>
+                <div class="offercard_inside">
+                    <div class="carddescription">
+                        <ul>
+                            <li>do x podstron</li>
+                            <li>wesja mobilna</li>
+                            <li>fajne rzeczy</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                        </ul>
+                    </div>
+                    <div class="redbutton_offer">lorem ipsumasd</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container_four">
+        
+        <div class="c2header">Skontaktuj się z nami</div>
+        <div class="contactinfocontainer">
+            <h2>Jak wygląda proces tworzenia strony?</h2>
+            <ol>
+                <li>Darmowa wycena</li>
+                <li>Rozmowa z klientem</li>
+                <span class="lidesc">- ustalenie celów i potrzeb</span>
+                <li>Tworzenie indywidualnego projektu graficznego</li>
+                <span class="lidesc">- dbamy o unikalność i estetyke każdego projektu</span>
+                <li>Pisanie strony</li>
+                <li>Testowanie</li>
+                <span class="lidesc">- zespół testerów i klient wykonują testy przed uruchomieniem</span>
+                <li>Wdrożenie</li>
+                <span class="lidesc">- pomoc w wyborze domeny i hostingu oraz wstawienie strony</span>
+            </ol>
+            Aby zapewnić najwyższą jakość naszych usług, w czasie tworzenia jak i po wdrożeniu (w zależności od wybranego pakietu) jesteśmy w kontakcie z naszymi klientami, dbając o to, by spełnić wszelkie ich oczekiwania
+        </div>
+        <div class="contactmethodscontainer">
+            <h2>Napisz do nas</h2>
+            <div class="emailphone"><a href="mailto:kontakt@webboost.pl">kontakt@webboost.pl</a></div>
+            <h2>lub</h2>
+            <h2>Zadzwoń</h2>
+            <div class="emailphone"><a href="tel:+48731614001">731 614 001</a></div>
+            <h2 class="h2special">i poproś o</h2>
+            <div class="contactfree"><h2 class="h2not">darmową wycene</h2></div>
+        </div>
+    </div>
+    <script>
+        function goleft() {
+            let firstcard = document.getElementById("firstcard");
+            let secondcard = document.getElementById("secondcard");
+            let thirdcard = document.getElementById("thirdcard");
+            let arrow = document.getElementById("arrow");
+            let arrowtwo = document.getElementById("arrowtwo");
+            if (firstcard.style.marginLeft == "" ) {
+                firstcard.style.marginLeft = "62vw"
+                firstcard.classList.remove("secondcard");
+                secondcard.classList.add("secondcard")
+                arrow.classList.add("hidearrow")
+            } else if (firstcard.style.marginLeft == "-62vw" ) {
+                firstcard.style.marginLeft = ""
+                
+                thirdcard.classList.add("secondcard");
+                secondcard.classList.remove("secondcard")
+                arrowtwo.classList.remove("hidearrow")
+            }
+        }
+        function goright() {
+            let firstcard = document.getElementById("firstcard");
+            let secondcard = document.getElementById("secondcard");
+            let thirdcard = document.getElementById("thirdcard");
+            let arrow = document.getElementById("arrow");
+            let arrowtwo = document.getElementById("arrowtwo");
+            if (firstcard.style.marginLeft == "62vw" ) {
+                firstcard.style.marginLeft = ""
+
+                firstcard.classList.add("secondcard");
+                secondcard.classList.remove("secondcard")
+                arrow.classList.remove("hidearrow")
+            } else if (firstcard.style.marginLeft == "" ) {
+                firstcard.style.marginLeft = "-62vw"
+
+                thirdcard.classList.remove("secondcard");
+                secondcard.classList.add("secondcard")
+                arrowtwo.classList.add("hidearrow")
+            }
+        }
+    </script>
+
+    <script>
+        let container_one = document.getElementById("container_one");
+        
+       window.addEventListener('wheel', function(event)
+        {
+        if (event.deltaY < 0)
+        {
+            if (container_one.classList.contains("show_about")) {
+                scroll_main()
+            } if (container_one.classList.contains("show_oferta")) {
+                scroll_about()
+            }if (container_one.classList.contains("show_contact")) {
+                scroll_oferta()
+            }
+        }
+        else if (event.deltaY > 0)
+        {
+            if (container_one.classList.contains("show_about")) {
+                scroll_oferta()
+            } else if (container_one.classList.contains("show_oferta")) {
+                scroll_contact()
+            }
+            else if (container_one.classList.contains("show_contact")) {
+                console.log("")
+            } else  {
+                scroll_about()
+            }
+        }
+        });
+
+        window.addEventListener('touchstart', function(e)
+        {
+            if(e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel'){
+                var evt = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
+                var touch = evt.touches[0] || evt.changedTouches[0];
+                ts = touch.pageY;
+            } 
+        });
+        window.addEventListener('touchend', function(e)
+        {
+            if(e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel'){
+                var evt = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
+                var touch = evt.touches[0] || evt.changedTouches[0];
+                var te = touch.pageY;
+                if (te > ts + 30) {
+                    if (container_one.classList.contains("show_about")) {
+                        scroll_main()
+                    } if (container_one.classList.contains("show_oferta")) {
+                        scroll_about()
+                    }if (container_one.classList.contains("show_contact")) {
+                        scroll_oferta()
+                    }
+                } else if (te < ts - 30) {
+                    if (container_one.classList.contains("show_about")) {
+                        scroll_oferta()
+                    } else if (container_one.classList.contains("show_oferta")) {
+                        scroll_contact()
+                    }
+                    else if (container_one.classList.contains("show_contact")) {
+                        console.log("")
+                    } else  {
+                        scroll_about()
+                    }
+                }
+
+            } 
+        });
+    </script>
+   
+    <script>
+        function scroll_about() {
+            document.getElementById("nav").classList.add("smaller_nav")
+            container_one.classList.add("show_about")
+            container_one.classList.remove("show_oferta")
+            container_one.classList.remove("show_contact")
+        } 
+        function scroll_oferta() {
+            container_one.classList.add("show_oferta")
+            container_one.classList.remove("show_about")
+            container_one.classList.remove("show_contact")
+        } 
+        function scroll_main() {
+            container_one.classList.remove("show_about")
+            container_one.classList.remove("show_contact")
+            container_one.classList.remove("show_oferta")
+        }
+        function scroll_contact() {
+            container_one.classList.add("show_contact")
+            container_one.classList.remove("show_oferta")
+            container_one.classList.remove("show_about")
+        }
+    </script>
+</body>
+</html>
