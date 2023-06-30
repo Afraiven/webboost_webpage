@@ -159,8 +159,10 @@ h2{
     padding: 1vh;
     border: 3px solid black;
     margin-left: -5vw;
-    margin-top: -1vh;
+    margin-top: 0vh;
+    transition: .4s ease;
 }
+
 #container_one {
     padding-top: 20vh;
     padding-left: 15vw;
@@ -258,7 +260,7 @@ nav {
 }
 
 #textcont:hover {
-    background-color:#5038B2; }
+    background-color:#970f36; }
 
 .red {
     color: black;
@@ -636,7 +638,6 @@ h1 {
 }
 
 .onasimg::after {
-    background-color: #fff;
     position: absolute;
     content: "Dlaczego my?";
     height: fit-content;
@@ -644,14 +645,21 @@ h1 {
     font-size: 1.5em;
     font-weight: 500;
     text-align: center;
-    border-radius: 40px;
     border-bottom-right-radius: 0;
-    padding: 2vh;
-    border: 3px solid black;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    top: 4vh;
-    right: -3vh;
+    bottom: -5vh;
+    right: 0;
+}
+.onasimg::before {
+    position: absolute;
+    content: "@WebBoost";
+    height: fit-content;
+    width: fit-content;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    border-bottom-right-radius: 0;
+    bottom: -5vh;
+    left: 0;
 }
 .onasimg img {
     margin-top: -7vh;
@@ -660,6 +668,7 @@ h1 {
     object-fit: contain;
 }
 .card{ 
+    cursor: pointer;
     padding-left: 1vw;
     padding-right: 1vw;
     word-spacing: .1em;
@@ -670,20 +679,22 @@ h1 {
     transition: all .5s ease;
     overflow: hidden;
 }
-.cardcontainer:hover .card{
+.cardhovered{
     height: calc(1ex / 0.26);
 }
 .high {
     transition: .2s ease all;
 }
-.card:hover .high {
-    background-color: #f41857;
-    color: white;
+.cardopened .high {
+    color: #f41857;
+}
+.highop {
+    color: #f41857;
 }
 .card:hover .span{
-    font-weight: 500;
+    font-size: 1.45em;
 }
-.card:hover{
+.cardopened{
     height: calc(53vh - calc(2ex / 0.31)) !important;
     color: black;
     }
@@ -695,6 +706,7 @@ h1 {
         font-size: 1.4em;
         color: black !important;
         cursor: pointer;
+        transition: all .18s ease;
     }
 .bio {
     position: relative;
@@ -872,10 +884,11 @@ a {
 
     .header {
         margin-left: 0 !important;
-        font-size: 1.5em !important;
+        font-size: 1.6em !important;
+        margin-top: 7vh;
     }
     .sec_header {
-        font-size: .7em !important;
+        font-size: .6 !important;
         float: unset !important;
         text-align: right;
         width: auto;
@@ -918,7 +931,7 @@ a {
         float: right;
     }
     .contactinfocontainer {
-        font-size: 1.3em;
+        font-size: 1.4em;
         width: 100%;
         height: fit-content;
     }
@@ -967,6 +980,7 @@ a {
     .cardcontainer {
         user-select: none;
         width: 70%;
+        font-size: 1.3em;
     }
     
     .cardcontainer:hover .card{
@@ -1014,6 +1028,10 @@ a {
         width: 186vw;
         overflow: hidden;
         margin-left: -58vw;
+    }
+    .card:hover .high {
+        
+        color: #f41857;
     }
     #arrow {
         user-select: none;
@@ -1110,6 +1128,12 @@ align-content: center;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         padding: 5vh 5vw 5vh 5vw;
         transition: all .6s ease;
+    }
+    .mobileul {
+        margin-left: -1.5vw;
+    }
+    .onasimg::before {
+        display: none;
     }
     .blured {
         filter: blur(3px);
