@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body tabindex="-1"> 
+    <div id="move"></div>
 <nav id="nav">
     <div id="innernav">
         <div onclick="scroll_main()" class="logo"><img src="https://i.ibb.co/34zMdGN/obraz-2023-06-13-193641193-removebg-preview.png" alt="">WebBoost</div>
@@ -418,26 +419,60 @@
     </script>
    
     <script>
+        let move = document.getElementById("move");
         function scroll_about() {
-            document.getElementById("nav").classList.add("smaller_nav")
-            container_one.classList.add("show_about")
-            container_one.classList.remove("show_oferta")
-            container_one.classList.remove("show_contact")
+            if (move.classList.contains("moving")) {
+
+            } else {
+                move.classList.add("moving")
+                document.getElementById("nav").classList.add("smaller_nav")
+                container_one.classList.add("show_about")
+                container_one.classList.remove("show_oferta")
+                container_one.classList.remove("show_contact")
+                setTimeout(() => {
+                    move.classList.remove("moving")
+                }, 500)
+            }
         } 
+        
         function scroll_oferta() {
+            if (move.classList.contains("moving")) {
+
+            } else {
+            move.classList.add("moving")
             container_one.classList.add("show_oferta")
             container_one.classList.remove("show_about")
             container_one.classList.remove("show_contact")
+            setTimeout(() => {
+                    move.classList.remove("moving")
+                }, 500)
+            }
         } 
         function scroll_main() {
+            if (move.classList.contains("moving")) {
+
+            } else {
+            move.classList.add("moving")
             container_one.classList.remove("show_about")
             container_one.classList.remove("show_contact")
             container_one.classList.remove("show_oferta")
+            setTimeout(() => {
+                    move.classList.remove("moving")
+                }, 500)
+            }
         }
         function scroll_contact() {
+            if (move.classList.contains("moving")) {
+
+            } else {
+            move.classList.add("moving")
             container_one.classList.add("show_contact")
             container_one.classList.remove("show_oferta")
             container_one.classList.remove("show_about")
+            setTimeout(() => {
+                    move.classList.remove("moving")
+                }, 500)
+            }
         }
     </script>
 </body>
