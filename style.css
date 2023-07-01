@@ -1037,6 +1037,22 @@ a {
         
         color: #f41857;
     }
+    .offercard_inside {
+        box-shadow: none;
+}
+.offercard_inside::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    top: 0;
+    right: 0;
+    border-radius: 49px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: opacity 0.3s ease-in-out;
+  }
     #arrow {
         user-select: none;
         position: absolute;
