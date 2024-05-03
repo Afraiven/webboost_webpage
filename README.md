@@ -1,14 +1,14 @@
-# Strona internetowa webboost
+# WebBoost Website
 
-## Opis
-Strona internetowa wizytówka
+## Description
+A website that serves as an online business card.
 
-## Instrukcje Otwarcia
-Strona dostępna pod adresem: https://afraiven.github.io/webboost_webpage/
+## Access Instructions
+The website is available at: https://afraiven.github.io/webboost_webpage/
 
-## Technologie
-HTML
-CSS
-JAVASCRIPT
+## Technologies
+- HTML
+- CSS
+- JAVASCRIPT
 
 ![image](https://github.com/Afraiven/webboost_webpage/assets/65568833/9e367cf6-e2d1-4a81-8608-e596fe7b0d8f)
